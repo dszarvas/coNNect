@@ -23,7 +23,7 @@ COPY requirements.txt .
 # Create and activate a Conda environment, install dependencies
 RUN conda update -n base -c defaults conda \
     && conda create -n connect-env python=3.10 \
-    && conda install -n connect-env -y -c pytorch -c nvidia -c pyg --file requirements.txt \
+    && conda install -n connect-env -y -c pytorch -c nvidia -c pyg -c conda-forge --file requirements.txt \
     && conda clean -afy
 
 # Activate Conda environment and install Jupyter and ipykernel
