@@ -84,3 +84,35 @@ following command:
 ```bash
 $ docker exec -it <hash-of-container> bash
 ```
+
+## How to run the pipeline
+
+To run the complete pipeline, it's necessary to start the `coNNect.ipynb` notebook in the running container with 
+kernel from the Conda-managed virtualenv `connect-env`. Executing all cells in the notebook makes running the pipeline 
+possible.
+
+
+## How to train the models
+
+### Baseline
+
+Scroll to the "Milestone 2" part of the `coNNect.ipynb` notebook and find the "Baseline model" section.
+Run all the cells until the label for "Evaluate baseline model" phase to train the model.
+
+### GNN
+
+Scroll to the "Milestone 2" part of the `coNNect.ipynb` notebook and find the "GNN Model (`coNNect`)" section.
+Run all the cells until the label for "Evaluate `coNNect` model" phase to train the model.
+
+
+## How to evaluate the models
+
+### Baseline
+
+Scroll to the "Milestone 2" part of the `coNNect.ipynb` notebook and find the "Baseline model" section.
+Run all the cells until the "GNN Model (`coNNect`)" section to train and evaluate the model.
+
+### GNN
+
+Scroll to the "Milestone 2" part of the `coNNect.ipynb` notebook and find the "GNN Model (`coNNect`)" section.
+Run all the cells until the "Final submission" section to train and evaluate the model.
