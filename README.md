@@ -87,12 +87,15 @@ $ docker exec -it <hash-of-container> bash
 
 ## How to run the pipeline
 
+*Future plans include separation into files, left out for "Milestone 2" due to short time for development.*
+
 To run the complete pipeline, it's necessary to start the `coNNect.ipynb` notebook in the running container with 
 kernel from the Conda-managed virtualenv `connect-env`. Executing all cells in the notebook makes running the pipeline 
-possible.
-
+possible. 
 
 ## How to train the models
+
+*Future plans include separation into files, left out for "Milestone 2" due to short time for development.*
 
 ### Baseline
 
@@ -106,6 +109,8 @@ Run all the cells until the label for "Evaluate `coNNect` model" phase to train 
 
 
 ## How to evaluate the models
+
+*Future plans include separation into files, left out for "Milestone 2" due to short time for development.*
 
 ### Baseline
 
