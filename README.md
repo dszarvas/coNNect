@@ -13,6 +13,7 @@ Horváth Szilárd (*MZ7VX5*) and Szarvas Dániel (*A85UKT*)
 - `.gitignore`: For selecting local files to avoid pushing into the remote repository.
 - `Dockerfile`: File to build the solution's Docker image from. The container created from this image will host our model.
 - `README.md`: File containing important metadata and 'Getting Started' guide for the project.
+- `coNNect_documentation.pdf`: Documentation for the project.
 - `coNNect_EDA.ipynb`: Notebook containing the data acquisition, data visualization and Explanatory Data Analysis (EDA).
 - `coNNect_baseline.ipynb`: Notebook containing the data preparation for the baseline model, along with training end evaluating the model.
 - `coNNect_GNN.ipynb`: Notebook containing the data preparation for the GNN model, along with training end evaluating the model. It also includes a Gradio app.
