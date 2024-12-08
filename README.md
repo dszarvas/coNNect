@@ -13,12 +13,16 @@ Horváth Szilárd (*MZ7VX5*) and Szarvas Dániel (*A85UKT*)
 - `.gitignore`: For selecting local files to avoid pushing into the remote repository.
 - `Dockerfile`: File to build the solution's Docker image from. The container created from this image will host our model.
 - `README.md`: File containing important metadata and 'Getting Started' guide for the project.
-- `coNNect.ipynb`: Notebook containing the data acquisition and data preparation processes for Milestone 1.
+- `coNNect_EDA.ipynb`: Notebook containing the data acquisition, data visualization and Explanatory Data Analysis (EDA).
+- `coNNect_baseline.ipynb`: Notebook containing the data preparation for the baseline model, along with training end evaluating the model.
+- `coNNect_GNN.ipynb`: Notebook containing the data preparation for the GNN model, along with training end evaluating the model. It also includes a Gradio app.
 - `requirements.txt`: Python dependencies listed for Conda. To add new dependencies, run `conda install <pckg>` 
 and save the new dependencies to this file with `conda list -e | grep -v pypi > requirements.txt`. 
 
 ## Related works
 - ["PyTorch Geometric" Python package](https://github.com/pyg-team/pytorch_geometric)
+- ["Semi-Supervised Classification with Graph Convolutional Networks" paper](https://arxiv.org/abs/1609.02907)
+- ["Inductive Representation Learning on Large Graphs" paper](https://arxiv.org/abs/1706.02216)
 - ["node2vec" paper](https://arxiv.org/abs/1607.00653)
 - ["Variational Graph Auto-Encoders" paper](https://arxiv.org/abs/1611.07308)
 
@@ -85,39 +89,32 @@ following command:
 $ docker exec -it <hash-of-container> bash
 ```
 
-## How to run the pipeline
+## How to run the pipelines
 
-*Future plans include separation into files, left out for "Milestone 2" due to short time for development.*
+To run any pipelines, it's necessary to start the sufficient notebook in the running container from the
+kernel inside the Conda-managed virtualenv `connect-env`. A GPU with CUDA capabilities is recommended for the runs.
 
-To run the complete pipeline, it's necessary to start the `coNNect.ipynb` notebook in the running container with 
-kernel from the Conda-managed virtualenv `connect-env`. Executing all cells in the notebook makes running the pipeline 
-possible. 
+## How to perform EDA (Explanatory Data Analysis)
+
+Run all cells in the `coNNect_EDA.ipynb` notebook to perform EDA along with useful data visualizations before training.
 
 ## How to train the models
 
-*Future plans include separation into files, left out for "Milestone 2" due to short time for development.*
-
 ### Baseline
 
-Scroll to the "Milestone 2" part of the `coNNect.ipynb` notebook and find the "Baseline model" section.
-Run all the cells until the label for "Evaluate baseline model" phase to train the model.
+Run all cells in the `coNNect_baseline.ipynb` notebook until the evaluation section to train the model.
 
 ### GNN
 
-Scroll to the "Milestone 2" part of the `coNNect.ipynb` notebook and find the "GNN Model (`coNNect`)" section.
-Run all the cells until the label for "Evaluate `coNNect` model" phase to train the model.
+Run all cells in the `coNNect_GNN.ipynb` notebook until the "Evaluate `coNNect` model" section to train the model.
 
 
 ## How to evaluate the models
 
-*Future plans include separation into files, left out for "Milestone 2" due to short time for development.*
-
 ### Baseline
 
-Scroll to the "Milestone 2" part of the `coNNect.ipynb` notebook and find the "Baseline model" section.
-Run all the cells until the "GNN Model (`coNNect`)" section to train and evaluate the model.
+Run all cells in the `coNNect_baseline.ipynb` notebook section to both train a model and then evaluate the trained model.
 
 ### GNN
 
-Scroll to the "Milestone 2" part of the `coNNect.ipynb` notebook and find the "GNN Model (`coNNect`)" section.
-Run all the cells until the "Final submission" section to train and evaluate the model.
+Run all cells in the `coNNect_GNN.ipynb` notebook section to both train a model and then evaluate the trained model.
